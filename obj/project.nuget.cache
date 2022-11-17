@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "41rqHqG9rs+QkCvIvbU9TaUKwdSvgK8fjujS107rIjiP1m0dLouMD3UhN0X4zA+ZlGuCHjhm6dmrWjbO6fs10Q==",
+  "success": true,
+  "projectFilePath": "D:\\_Docker Files\\ConsoleAppCheckVerApacheTomcat\\ConsoleAppCheckVerApacheTomcat.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kwnik\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\kwnik\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
+    "C:\\Users\\kwnik\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
