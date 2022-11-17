@@ -25,15 +25,17 @@ internal static class Program
 {
     private static void Main(string[] args)
     {
-        string host = "127.0.0.1";
-        string port = "5432";
+        string host_WebServer = "127.0.0.1";
+        string post_WebServer = "8888";
+        string host_db = host_WebServer;
+        string port_db = "5432";
         string name_host = "postgres";
         string password = "postgres";
         string name_db = "postgres";
 
         //Настраиваем команду для вызова подготовленного скрипта
         ProcessStartInfo psi = new ProcessStartInfo("nmap",
-            $"--script=my_script_1.nse -n 127.0.0.1 -p 8888 --unprivileged -Pn");
+            $"--script=my_script_1.nse -n {host_WebServer} -p {post_WebServer} --unprivileged -Pn");
         psi.UseShellExecute = false;
         psi.RedirectStandardOutput = true;
 
@@ -63,7 +65,7 @@ internal static class Program
         string result = matches[0].Groups[1].ToString();
 
         //Полученный результат отправляем на базу данных в таблицу ApacheVer_log
-        string connString = $"Host={host}:{port};Username={name_host};Password={password};Database={name_db}";
+        string connString = $"Host={host_db}:{port_db};Username={name_host};Password={password};Database={name_db}";
         NpgsqlConnection connectDB = new NpgsqlConnection(connString);
         try
         {
